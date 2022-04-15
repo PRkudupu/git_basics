@@ -1,14 +1,56 @@
---Change the remote git repository
-	git remote set-url origin git@github.com:PRkudupu/Algo-python.git@github
+*****************************
+GIT 
+***************************** 
  
---Add projects to existing git repository
-	1) git init (Inside the folder where the project resides)
-	2) git add -A
-	3) git commit -m "comments about the project."
-	4) git remote add origin git@github.com:PRkudupu/ml_metrics.git
-	5) git push -u origin
-	6) git push --set-upstream origin master
-	
-	
+	CHANGE REMOTE GIT REPOSITORY
+		git remote set-url origin git@github.com:PRkudupu/Algo-python.git@github
+ 
+	ADD LOCAL PROJECT TO EXISTING GIT REPOSIORY
+		1) git init (Inside the folder where the project resides)
+		2) git add -A
+		3) git commit -m "comments about the project."
+		4) git remote add origin git@github.com:PRkudupu/ml_metrics.git
+		5) git push -u origin
+		6) git push --set-upstream origin master
 
+	BRANCH
+		CREATE NEW BRANCH
+			git checkout -b "DEV"
+		CREATE CHANGE BRANCH
+			git checkout "DEV"
+		GET LATEST VERSION 
+			git pull
+		GET ALL BRANCH FROM REPO
+			git fetch --all
+	REMOVE LOCAL CHANGES
+		git stash
+	MERGE 
+		checkout the branch which needs to be merged (ex master merge with dev[changes from dev to master])
+		git checkout master
+		git merge DEV
+	DELETE BRANCH
+	    // delete branch locally
+		git branch -d "dev"
+
+		// delete branch remotely
+		git push origin --delete dev
+	RESET LOCAL BRANCH
+		git fetch origin
+		git reset --hard origin/master
+	REMOVE LOCAL CHANGES 
+		git stash
 	
+	PRINT LIST OF FILES WHICH WILL BE REMOVED
+	# Print out the list of files and directories which will be removed (dry run)
+		git clean -n -d
+	SHOW CURRRENT BRANCH
+		git branch
+	LIST ALL LOCAL BRANCHES
+		git branch -a
+	LIST REMOTE BRANCHES ONLY
+		git branch -r
+	LIST LOCAL BRANCHES ONLY
+		git branch 
+	WHEN BRANCH IS BEHIND
+	    git reset
+		git pull
