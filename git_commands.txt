@@ -1,0 +1,14 @@
+--Change the remote git repository
+	git remote set-url origin git@github.com:PRkudupu/Algo-python.git@github
+ 
+--Add projects to existing git repository
+	1) git init (Inside the folder where the project resides)
+	2) git add -A
+	3) git commit -m "comments about the project."
+	4) git remote add origin git@github.com:PRkudupu/ml_metrics.git
+	5) git push -u origin
+	6) git push --set-upstream origin master
+	
+	
+
+	
